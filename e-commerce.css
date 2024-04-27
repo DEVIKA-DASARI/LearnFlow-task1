@@ -1,0 +1,443 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    background-color: transparent;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: white;
+    --main-color: #b60dc6;
+    --second-color: #858585;
+    --bg-color: #fffbf6;
+    --big-font: 4.5rem;
+    --h2-font: 2.6rem;
+    --p-font: 1.1rem;
+    --h3-color: aqua;
+}
+
+body {
+    background: var(text-color);
+    color: var(--text-color);
+    background-color: rgb(9, 8, 9);
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+
+}
+
+h1 {
+    color: rgb(23, 1, 13);
+    text-align: center;
+    font-weight: bold;
+}
+
+p {
+    color: rgb(153, 16, 202);
+    font-size: 20px;
+}
+.nav {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the navigation links */
+.nav li {
+    display: inline-block;
+    margin-right: 20px;
+    /* Adjust spacing between links */
+}
+
+.nav li:last-child {
+    margin-right: 0;
+    /* Remove margin from the last link */
+}
+
+.nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    /* Add smooth transition */
+}
+
+/* Change background color on hover */
+.nav a:hover {
+    background-color: #555;
+}
+
+/* Add animation to navigation links */
+.nav a {
+    position: relative;
+}
+
+.nav a::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav a:hover::before {
+    transform: scaleX(1);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(25, 6, 63);
+    padding: 23px 15%;
+    transition: all .38s ease;
+}
+.cover_page {
+    position: auto;
+    max-width: 100%;
+    margin: auto;
+}
+
+.cover {
+    display: flex;
+    width: 100%;
+}
+
+.cover img {
+    width: 100%;
+    height: 600px;
+}
+
+/* Next/prev buttons */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.fade-out {
+    animation: fadeOut 0.2s ease-in-out;
+}
+
+
+
+.head img{
+    width: 100%;
+    height:500px;
+
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+@media only screen and (max-width: 768px) {
+    header nav {
+        height: 5rem;
+        line-height: 5rem;
+    }
+
+    header nav .logo {
+        width: 45%;
+    }
+
+    header nav .nav-icon img {
+        margin-top: 1.4rem;
+    }
+
+    header nav ul {
+        width: 20%;
+        display: none;
+    }
+
+    header nav ul li {
+        display: none;
+    }
+    cover_page{
+        width:50%;
+        min-height: 500px;
+    }
+    cover img{
+        width:50%;
+        min-height: 500px;
+
+    }
+    show img{
+        width:50%;
+        height:50%;
+
+    }
+    display{
+        width:50%;
+        min-height:auto;
+    }
+    new img{
+        width:50%;
+        min-height:fit-content;
+    }
+    model{
+        width:50%;
+        min-height:fit-content;
+    }
+}
+
+
+
+.show {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: right;
+    border-radius: 50%;
+}
+
+.display {
+    display: flex;
+    flex-direction: row;
+    align-items: right;
+    gap: 30px;
+
+    /* Adjust the gap between images as needed */
+}
+
+.show img {
+    width:200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    padding:20px;
+
+    /* Add a transition for smooth animation */
+}
+
+.show img:hover {
+    transform: scale(1.1);
+    /* Increase the size of the image on hover */
+}
+
+#display {
+    width: 100%;
+}
+
+.new {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: right;
+}
+.home h1{
+    font-size:30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:aliceblue;
+    text-shadow: 4px ;
+}
+
+.model {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: right;
+    gap: 30px;
+
+    /* Adjust the gap between images as needed */
+}
+
+.new img {
+    width:250px;
+    height: 250px;
+    transition: transform 0.3s ease;
+
+    /* Add a transition for smooth animation */
+}
+
+.new img:hover {
+    transform: scale(1.1);
+    /* Increase the size of the image on hover */
+}
+
+#model {
+    width: 100%;
+}
+/* Next/prev buttons */
+.start,
+.back {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(4, 4, 4, 0.5);
+}
+
+.start {
+    left: 0;
+}
+
+.back {
+    right: 0;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.fade-out {
+    animation: fadeOut 0.2s ease-in-out;
+}
+
+/* Style for card container */
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Style for individual card */
+.card {
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+/* Style for image container */
+.image-container {
+    width: 50%;
+    float: left;
+    overflow: hidden;
+}
+
+/* Style for image inside the container */
+.image-container img {
+    width: 100%;
+    height: 80%;
+    align-content: space-evenly;
+}
+
+/* Style for content container */
+.card-container{
+    background-color: #858585;
+
+}
+/* Style for heading inside content */
+.content h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color:white;
+    justify-content:center;
+    position: relative;
+}
+
+/* Style for paragraph inside content */
+.content p {
+    font-size: 14px;
+    color:white;
+    line-height: 1.5;
+    align-items: flex-end;
+}
+
+/* Hover effect on card */
+.card:hover {
+    transform: scale(1.05);
+}
+
+.login button{
+    color:white;
+    width: 100px;
+    height: 50px;
+    background-color: rgb(4, 7, 35);
+    position:center;
+    justify-content: center;
+    text-align: center;
+
+}
+.login{
+    text-align: center;
+}
+
+footer{
+    background-color: #858585;
+    height:100px;
+    text-align: center;
+p{
+    text-align:center;
+    position: relative;
+    display: block;
+    font-family: Arial, sans;
+    color: rgb(21, 15, 48);
+}
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 40px);
+        /* Adjust card width for smaller screens */
+    }
+}
